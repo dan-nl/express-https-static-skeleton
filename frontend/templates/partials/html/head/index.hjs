@@ -1,0 +1,6 @@
+<head>
+  {{#meta}}{{> html.head.meta }}{{/meta}}
+  {{#title}}{{> html.head.title }}{{/title}}
+  {{#links}}{{> html.head.links }}{{/links}}
+  {{#style}}{{> html.head.style }}{{/style}}
+</head>

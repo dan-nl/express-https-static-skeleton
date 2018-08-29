@@ -1,0 +1,7 @@
+{{> html.open }}
+
+<h1>express https static skeleton</h1>
+<p>demonstrate creation of a static page with {{ some_data }}. here’s a <a href="/subpage">subpage</a>.</p>
+<img src="/images/tree.jpg">
+
+{{> html.close }}

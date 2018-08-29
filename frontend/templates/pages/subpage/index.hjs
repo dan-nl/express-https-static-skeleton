@@ -1,0 +1,6 @@
+{{> html.open }}
+
+<h2>sub page</h2>
+<p>a sub page with no page specific data. and a <a href="/subpage/data-page.html">sub page with specific data</a>.</p>
+
+{{> html.close }}

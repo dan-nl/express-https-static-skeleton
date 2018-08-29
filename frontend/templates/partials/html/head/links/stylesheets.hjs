@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="{{ href }}"{{#integrity}} integrity="{{integrity}}"{{/integrity}}{{#crossorigin}} crossorigin="{{ crossorigin }}"{{/crossorigin}}>

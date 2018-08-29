@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+/* eslint-disable no-sync,global-require */
+
+'use strict'
+
+const app = require( '../backend/app' )
+const config = require( '../config/app' )
+const error = require( 'net-server-events-error' )
+const fs = require( 'fs' )
+const https = require( 'https' )
+const listening = require( 'net-server-events-listening' )
+const normalizePort = require( 'normalize-port' )
+
+const port = normalizePort( config.port )
+const ip_address = config.ip_address.toString()
+
+const ssloptions = {
+  cert: fs.readFileSync( config.ssl.crt ),
+  key: fs.readFileSync( config.ssl.key )
+}
+
+app.set( 'port', port )
+
+const server = https.createServer( ssloptions, app )
+
+server.on( 'error', error )
+server.on( 'listening', listening )
+server.listen( port, ip_address )
+
+process.argv.forEach(
+  ( val ) => {
+    if ( val === 'watch' ) {
+      require( '../frontend/helpers/watch' )()
+    }
+  }
+)

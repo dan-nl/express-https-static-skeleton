@@ -1,0 +1,6 @@
+{{> html.open }}
+
+<h2>data sub page</h2>
+<p>a sub page {{ page_data }}.</p>
+
+{{> html.close }}
