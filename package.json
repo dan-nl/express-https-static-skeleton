@@ -1,6 +1,6 @@
 {
   "name": "express-https-static-skeleton",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "an express, https static web application",
   "author": "dan entous",
   "license": "MIT",
